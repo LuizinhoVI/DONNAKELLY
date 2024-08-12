@@ -24,7 +24,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <h3 class="w3-wide" align="center"><b align="center"><img src="img/logo.png"  height="200px"></b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="#" class="w3-bar-item w3-button">Formatação</a>
+    <a href="#" class="w3-bar-item w3-button">Inicio</a>
+    <a href="#" onclick="format()" class="w3-bar-item w3-button">Formatação</a>
     <a href="#" class="w3-bar-item w3-button">Manutenção</a>
     <a href="#" class="w3-bar-item w3-button">Clientes</a>
     <a href="#" class="w3-bar-item w3-button">Jogos</a>
@@ -61,22 +62,20 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   </header>
 
   <!-- Image header -->
-  <div class="w3-display-container w3-container">
-    <img src="img/tema.png" alt="Jeans" style="width:100%">
-    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
-      <!-- <h1 class="w3-jumbo w3-hide-small">Code programado</h1> -->
-      <!-- <h1 class="w3-hide-large w3-hide-medium">2024</h1> -->
-      <h1 class="w3-hide-small">Atualizado 2024</h1>
-      <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">whatsapp </a></p>
-    </div>
-  </div>
+  <div  id="inicial"></div>
 
   <div class="w3-container w3-text-grey" id="jeans">
     <p>7 items mais baixados</p>
   </div>
 
+  <!-- importação do sistema -->
+  <div id="format">  </div>
+  <!-- importação -->
+
+
+
   <!-- Product grid -->
-  <div class="w3-row w3-white">
+  <div style="display: none;" class="w3-row w3-white">
     <div class="w3-col l3 s6">
       <div class="w3-container">
         <img src="img/computador (1).png" style="width:100%">
@@ -207,21 +206,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </div>
 
 <script>
-// Accordion 
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
 
-// Click on the "Jeans" link on page load to open the accordion for demo purposes
-document.getElementById("myBtn").click();
-
-
-// Open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
   document.getElementById("myOverlay").style.display = "block";
