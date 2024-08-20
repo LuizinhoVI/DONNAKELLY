@@ -24,15 +24,31 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
     <a href="#" class="w3-bar-item w3-button">CANECAS</a>
     <a href="#" class="w3-bar-item w3-button">MDF</a>
+
+
+<!-- mostrar uma sub classi  -->
     <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      Jeans <i class="fa fa-caret-down"></i>
+      COPOS <i class="fa fa-caret-down"></i>
     </a>
     <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Skinny</a>
-      <a href="#" class="w3-bar-item w3-button">AZULEJO</a>
-      <a href="#" class="w3-bar-item w3-button">CAMISAS</a>
-      <a href="#" class="w3-bar-item w3-button">ALMOFADA</a>
+      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Caneca com colher</a>
+      <a href="#" class="w3-bar-item w3-button">Copo shop</a>
     </div>
+
+<!-- MOSTRA UMA SUB CLASI -->
+    <a onclick="myAccFunc1()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn1">
+      ALMOFADAS <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc1" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button w3-light-grey">
+
+      <i class="fa fa-caret-right w3-margin-right"></i>Almofada Mágica</a>
+      <a href="#" class="w3-bar-item w3-button">Almofada</a>
+      
+    </div>
+
+    
+
     <a href="#" class="w3-bar-item w3-button">AZULEJO</a>
       <a href="#" class="w3-bar-item w3-button">CAMISAS</a>
       <a href="#" class="w3-bar-item w3-button">ALMOFADA</a>
@@ -228,6 +244,14 @@ function myAccFunc() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+function myAccFunc1() {
+  var x = document.getElementById("demoAcc1");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
 
 // Click on the "Jeans" link on page load to open the accordion for demo purposes
 document.getElementById("myBtn").click();
@@ -243,6 +267,8 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
+
+
 </script>
 
 </body>
